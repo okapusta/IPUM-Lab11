@@ -40,8 +40,7 @@ jobs:
         uses: astral-sh/setup-uv@v7
 
       - name: Install dependencies
-        # TODO: sync ONLY the `integration` group dependencies
-        run: uv sync --group integration
+        run: uv sync --group integration deployment
 
       - name: Run ruff
         run: uv run ruff check .
