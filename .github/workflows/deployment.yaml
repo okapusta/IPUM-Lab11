@@ -6,6 +6,7 @@ on: workflow_dispatch
 env:
   AWS_REGION: us-east-1 # your region (e.g. us-east-1)
   ECR_REPOSITORY: sentiment-app-onnx  # must match the repository created in Exercise 1
+  ROLE_NAME: ${{ secrets.ROLE_NAME }}
 jobs:
   deployment:
     name: deployment
