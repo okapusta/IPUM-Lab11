@@ -27,7 +27,7 @@ jobs:
         uses: astral-sh/setup-uv@v7
 
       - name: Install dependencies
-        run: uv sync --group integration
+        run: uv sync --group deployment
 
       - name: Prepare model from HuggingFace Hub
         run: uv run python -m src.scripts.prepare_model_from_hf
